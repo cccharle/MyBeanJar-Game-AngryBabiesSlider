@@ -11,13 +11,15 @@ and (max-device-width : 568px) {
   }
 
   #puzzImg,
-  .jqp-wrapper {
+  .jqp-wrapper,
+  #hintloader {
     height: 50vw !important;
     width: 50vw;
   }
 
   .container {
     height: 50vw;
+    width: 50vw;
   }
 
   #puzz-outer {
@@ -25,18 +27,13 @@ and (max-device-width : 568px) {
     background-position: center -29.5vw;
   }
 
-  #hintbutton {
-    margin: 0% 25% 0 25%;
-    width: 50%;
-  }
-
-   #hintbutton:active {
-    margin: 0% 25.5% 0 25.5%;
-    width: 49%;
-  }
-
   .mbj-footer {
     position: fixed;
+  }
+
+  #puzzle-container {
+    border-width: 50px !important;
+    margin: 0 auto;
   }
 }
 

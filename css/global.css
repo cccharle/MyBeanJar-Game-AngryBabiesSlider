@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  background-color: #da4d32;
+  background-color: #34B8F6;
 }
 
 p {
@@ -25,12 +25,12 @@ p:last-child {
 }
 
 a {
-  color: #34B8F6;
+  color: #c59a1e;
 }
 
 #puzzle-container {
   border-image: url(../img/ab-border003.png) 100 100 stretch;
-  border-width: 15vw;
+  border-width: 15vw !important;
 }
 
 .hidden {
@@ -117,7 +117,7 @@ a {
 
 .ab-bg-accents {
   position: absolute;
-  width: 100%;
+  max-width: 100%;
 }
 
 #accent-upperright {
@@ -234,8 +234,7 @@ a {
 
   #puzz-outer,
   #ab-bg-container {
-    padding-top: 13vh;
-    height: 82vh;
+    /*height: 82vh;*/
   }
 
   #puzzImg,

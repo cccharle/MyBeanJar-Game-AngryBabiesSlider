@@ -97,16 +97,17 @@
 
 
     <body>
+
+        <div class="ab-bg-container">
+                        <img class="ab-bg-accents" id="accent-upperright" src="img/corner-accent-upperright.png">
+                        <img class="ab-bg-accents" id="accent-lowerleft" src="img/corner-accent-lowerleft.png">
+                    </div>
         <div id="app">
 
             <div id="puzzle-page" data-role="page" class="pg-page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                 </div>
                 <div data-role="content" class="content content-puzzle">
-                    <div class="ab-bg-container">
-                        <img class="ab-bg-accents" id="accent-upperright" src="img/corner-accent-upperright.png">
-                        <img class="ab-bg-accents" id="accent-lowerleft" src="img/corner-accent-lowerleft.png">
-                    </div>
                     
                     <div class="container" id="puzz-outer">
                         <div class="container puzz-element" id="puzzle-container">
