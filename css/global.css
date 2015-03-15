@@ -30,7 +30,6 @@ a {
 
 #puzzle-container {
   border-image: url(../img/ab-border003.png) 100 100 stretch;
-  border-width: 15vw !important;
 }
 
 .hidden {
@@ -117,7 +116,6 @@ a {
 
 .ab-bg-accents {
   position: absolute;
-  max-width: 100%;
 }
 
 #accent-upperright {
@@ -211,6 +209,10 @@ a {
     height: 70vw;
   }
 
+  .ab-bg-accents {
+    max-height: 100%;
+  }
+
   .btn-ab {
     width: 63vw;     /* 70vw */
     height: 19.467vw; /* Must be 30.9% of height */
@@ -245,7 +247,7 @@ a {
   }
 
   #puzzle-container {
-    border-width: 15vw; /* Must equal 1/2 of remainder of height and width described immediately above */
+    border-width: 15vw;/* Must equal 1/2 of remainder of height and width described immediately above */
   }
 
   .footer-header-strip {
@@ -281,6 +283,10 @@ a {
     width: 24.5vh;
     /* Necessary to maintain 1:1 ratio of inner container */
     height: 24.5vh;
+  }
+
+  .ab-bg-accents {
+    max-height: 100%;
   }
 
   .btn-ab {
@@ -338,6 +344,10 @@ a {
     width: 21.87vh;
     /* Necessary to maintain 1:1 ratio of inner container */
     height: 24.3vh;
+  }
+
+  .ab-bg-accents {
+    max-width: 100%;
   }
 
   .btn-ab {

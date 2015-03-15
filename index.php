@@ -99,10 +99,21 @@
     <body>
 
         <div class="ab-bg-container">
-                        <img class="ab-bg-accents" id="accent-upperright" src="img/corner-accent-upperright.png">
-                        <img class="ab-bg-accents" id="accent-lowerleft" src="img/corner-accent-lowerleft.png">
+                        <img class="ab-bg-accents" id="accent-upperright" src="img/corner-accent-upperright002.png">
+                        <img class="ab-bg-accents" id="accent-lowerleft" src="img/corner-accent-lowerleft002.png">
                     </div>
         <div id="app">
+
+
+
+
+            <div id="title-page" data-role="page" class="pg-page">
+                <div data-role="content" class="content">
+                </div>
+            </div>
+
+
+
 
             <div id="puzzle-page" data-role="page" class="pg-page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
