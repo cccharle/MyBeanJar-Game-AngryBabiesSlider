@@ -45,6 +45,7 @@ a {
 #puzz-outer {
   margin-bottom: 5%;
   width: 100%;
+  height: 100%;
 }
 
 .jqp-piece {
@@ -132,18 +133,34 @@ a {
 /* BUTTONS */
 
 .btn-ab {
-  background-size: cover;
-  width: 500px;  /* NEEDS TO BE RESPONSIVE */
-  height: auto; /* NEEDS TO BE RESPONSIVE */
+  margin: 0 auto;
+  display: block;
+}
+
+.btn-ab:focus {
+  outline: none;
 }
 
 .btn-ab-r {
   background: url(../img/ab-sbubb-r-clr.png);
+  background-size: cover;
+}
+
+.btn-ab-r:hover {
+  background: url(../img/ab-sbubb-r-act.png);
+  background-size: cover;
 }
 
 .btn-ab-l {
   background: url(../img/ab-sbubb-l-clr.png);
+  background-size: cover;
 }
+
+.btn-ab-l:hover {
+  background: url(../img/ab-sbubb-l-act.png);
+  background-size: cover;
+}
+
 
 
 
@@ -167,6 +184,19 @@ a {
     width: 70vw;
     /* Necessary to maintain 1:1 ratio of inner container */
     height: 70vw;
+  }
+
+  .btn-ab {
+    width: 63vw;     /* 70vw */
+    height: 19.467vw; /* Must be 30.9% of height */
+  }
+
+  .btn-ab-l {
+    margin-left: 6.3vw;    /* Must be 10% of total button width */
+  }
+
+  .btn-ab-r {
+    margin-right: 6.3vw;   /* Must be 10% of total button width */
   }
 
   .pg-page {
@@ -227,6 +257,19 @@ a {
     height: 24.5vh;
   }
 
+  .btn-ab {
+    width: 22.05vh;
+    height: 6.81345vh;       /* Must be 30.9% of height */
+  }
+
+  .btn-ab-l {
+    margin-left: 2.205vh;    /* Must be 10% of total button width */
+  }
+
+  .btn-ab-r {
+    margin-right: 2.205vh;   /* Must be 10% of total button width */
+  }
+
   #puzzle-container {
     border-width: 7.25vh; /* Must equal 1/2 of remainder (relative to real/simulated viewport) of height and width described immediately above */
   }
@@ -265,9 +308,22 @@ a {
 
 
   .container {
-    width: 24.3vh;
+    width: 21.87vh;
     /* Necessary to maintain 1:1 ratio of inner container */
     height: 24.3vh;
+  }
+
+  .btn-ab {
+    width: 24.3vh;
+    height: 6.75783h;       /* Must be 30.9% of height */
+  }
+
+  .btn-ab-l {
+    margin-left: 2.43vh;    /* Must be 10% of total button width */
+  }
+
+  .btn-ab-r {
+    margin-right: 2.43vh;   /* Must be 10% of total button width */
   }
 
    #puzzle-container {

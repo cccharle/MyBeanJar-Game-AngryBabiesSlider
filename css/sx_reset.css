@@ -78,7 +78,17 @@ hr {
     padding: 0;
 }
 
+/*      //////////////// -subplex- ///      */
+/*      //      buttons!!!          //      */
+/*      //////////////////////////////      */
 
+button {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
 
 /* 		//////////////// -subplex- /// 		*/
 /* 		//      helper classes      // 		*/

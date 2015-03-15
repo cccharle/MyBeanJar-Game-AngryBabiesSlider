@@ -83,6 +83,14 @@
                 get_winners("mainmenu");
             });
         </script>
+        <script type="text/javascript">                         // CLEAN UP LATER!!
+        jQuery.preloadImages = function() {
+          for (var i = 0; i < arguments.length; i++) {
+            $("<img />").attr("src", arguments[i]);
+          }
+        }
+        jQuery.preloadImages("ab-sbubb-r-act.png","ab-sbubb-r-act.png");
+        </script>
     </head>
    
 
@@ -107,13 +115,13 @@
                                 $randomimg = rand(2, sizeof($imgpool)-1);
                             ?>
                             <img class="jqPuzzle jqp-r3-c3-h1-SNABCDE" id="puzzImg" src="img/puzz/<?php echo $imgpool[$randomimg]; ?>">
-                            <img id="hintbutton" onclick="javascript:updateHint()" src="img/hint-btn-full.png">
+                            <!-- <img id="hintbutton" onclick="javascript:updateHint()" src="img/hint-btn-full.png"> -->
                         </div>
                     </div>
 
                     <div class="button-pool">
                         <button class="btn-ab btn-ab-r">Play</button>
-                        <button class="btn-ab btn-ab-l">Hint</button>
+                        <button class="btn-ab btn-ab-l" onclick="javascript:updateHint()">Hint</button>
                         <button class="btn-ab btn-ab-r">Score</button>
                     </div>
                
