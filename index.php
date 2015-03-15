@@ -38,6 +38,7 @@
         <link rel="stylesheet" type="text/css" href="css/global.css" media="all" />
         <link rel="stylesheet" type="text/css" href="css/devices.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="css/jquery.jqpuzzle.css" media="all" />
+        <link rel="stylesheet" type="text/css" href='//fonts.googleapis.com/css?family=Bangers'>
         
         
         <!--    ///////////////         -->
@@ -89,7 +90,7 @@
             $("<img />").attr("src", arguments[i]);
           }
         }
-        jQuery.preloadImages("ab-sbubb-r-act.png","ab-sbubb-r-act.png");
+        jQuery.preloadImages("img/ab-sbubb-l-act.png","img/ab-sbubb-r-act.png");
         </script>
     </head>
    
@@ -114,8 +115,10 @@
                                 $imgpool = scandir($dir);
                                 $randomimg = rand(2, sizeof($imgpool)-1);
                             ?>
+                            <div id="hintloader">
+                                <img src="img/activind.gif">
+                            </div>
                             <img class="jqPuzzle jqp-r3-c3-h1-SNABCDE" id="puzzImg" src="img/puzz/<?php echo $imgpool[$randomimg]; ?>">
-                            <!-- <img id="hintbutton" onclick="javascript:updateHint()" src="img/hint-btn-full.png"> -->
                         </div>
                     </div>
 

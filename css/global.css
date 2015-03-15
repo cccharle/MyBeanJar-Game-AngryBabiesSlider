@@ -25,7 +25,7 @@ p:last-child {
 }
 
 a {
-  color: #c59a1e;
+  color: #34B8F6;
 }
 
 #puzzle-container {
@@ -130,11 +130,13 @@ a {
   left: 0;
 }
 
-/* BUTTONS */
+/* BUTTONS *****************************************************************************************/
 
 .btn-ab {
   margin: 0 auto;
   display: block;
+  font-family: 'Bangers', cursive;
+  font-size: 1.3rem;
 }
 
 .btn-ab:focus {
@@ -144,6 +146,7 @@ a {
 .btn-ab-r {
   background: url(../img/ab-sbubb-r-clr.png);
   background-size: cover;
+  padding-bottom: 1.3rem;
 }
 
 .btn-ab-r:hover {
@@ -154,11 +157,33 @@ a {
 .btn-ab-l {
   background: url(../img/ab-sbubb-l-clr.png);
   background-size: cover;
+  padding-bottom: 1.1rem;
 }
 
 .btn-ab-l:hover {
   background: url(../img/ab-sbubb-l-act.png);
   background-size: cover;
+}
+
+/***************************************************************************************************/
+
+
+
+#hintloader {
+  background-color: #ffffff;
+  opacity: 0;
+  position: absolute;
+  display: block;
+  z-index: 5;
+  pointer-events: none;
+}
+
+#hintloader img {
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  position: relative;
 }
 
 
@@ -214,7 +239,8 @@ a {
   }
 
   #puzzImg,
-  .jqp-wrapper {
+  .jqp-wrapper,
+  #hintloader {
     height: 70vw !important;
     width: 70vw;
   }
@@ -251,7 +277,8 @@ a {
     box-shadow: 1.5vh 1.5vh 0px 0.5vh rgba(0,0,0,0.5);
   }
 
-  .container {
+  .container,
+  #hintloader {
     width: 24.5vh;
     /* Necessary to maintain 1:1 ratio of inner container */
     height: 24.5vh;
@@ -307,7 +334,8 @@ a {
   }
 
 
-  .container {
+  .container,
+  #hintloader {
     width: 21.87vh;
     /* Necessary to maintain 1:1 ratio of inner container */
     height: 24.3vh;
