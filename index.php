@@ -94,9 +94,12 @@
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                 </div>
                 <div data-role="content" class="content content-puzzle">
+                    <div class="ab-bg-container">
+                        <img class="ab-bg-accents" id="accent-upperright" src="img/corner-accent-upperright.png">
+                        <img class="ab-bg-accents" id="accent-lowerleft" src="img/corner-accent-lowerleft.png">
+                    </div>
                     
                     <div class="container" id="puzz-outer">
-                        <img src="img/bustameme-title.png" class="all-columns" id="bam-title">
                         <div class="container puzz-element" id="puzzle-container">
                             <?php 
                                 $dir = "img/puzz/";
@@ -106,6 +109,12 @@
                             <img class="jqPuzzle jqp-r3-c3-h1-SNABCDE" id="puzzImg" src="img/puzz/<?php echo $imgpool[$randomimg]; ?>">
                             <img id="hintbutton" onclick="javascript:updateHint()" src="img/hint-btn-full.png">
                         </div>
+                    </div>
+
+                    <div class="button-pool">
+                        <button class="btn-ab btn-ab-r">Play</button>
+                        <button class="btn-ab btn-ab-l">Hint</button>
+                        <button class="btn-ab btn-ab-r">Score</button>
                     </div>
                
                     <div class="mbj-footer">

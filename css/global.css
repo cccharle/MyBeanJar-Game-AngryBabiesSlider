@@ -2,6 +2,14 @@
 
 /* GLOBAL.CSS | Global styles for MyBeanJar Puzzle */
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   background-color: #da4d32;
 }
@@ -78,31 +86,14 @@ a {
   height: 100%;
 }
 
-/* ~~ PhoneGap View Defaults ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
-
-
-
 .pg-page {
   height: 100%;
 }
 
-#puzz-outer {
-  background: url(../img/puzzframe.jpg);
-  background-size: cover;
-  background-position: center -14.5vh;
+#puzz-outer
+#ab-bg-container {
   padding-top: 10vh;
-  background-origin: content-box;
-  background-repeat: no-repeat;
   height: 71vh;
-  background-color: #493c41;
 }
 
 #bam-title {
@@ -112,6 +103,46 @@ body {
   margin: 0% 10%;
   top: 0;
   width: 80%;
+}
+
+.ab-bg-container {
+  position: absolute;
+  z-index: -5;
+  background: url(../img/ab-bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%; 
+}
+
+.ab-bg-accents {
+  position: absolute;
+  width: 100%;
+}
+
+#accent-upperright {
+  top: 0;
+  right: 0;
+}
+
+#accent-lowerleft {
+  bottom: 0;
+  left: 0;
+}
+
+/* BUTTONS */
+
+.btn-ab {
+  background-size: cover;
+  width: 500px;  /* NEEDS TO BE RESPONSIVE */
+  height: auto; /* NEEDS TO BE RESPONSIVE */
+}
+
+.btn-ab-r {
+  background: url(../img/ab-sbubb-r-clr.png);
+}
+
+.btn-ab-l {
+  background: url(../img/ab-sbubb-l-clr.png);
 }
 
 
@@ -146,11 +177,9 @@ body {
     font-size: 5vw;
   }
 
-  #puzz-outer {
-    background-size: 161.5vw !important;
-    background-position: center -40.5vw;
+  #puzz-outer,
+  #ab-bg-container {
     padding-top: 13vh;
-    background-origin: content-box;
     height: 82vh;
   }
 
