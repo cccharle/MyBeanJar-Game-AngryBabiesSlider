@@ -214,6 +214,10 @@ a {
 .title-bits img {
 }
 
+#ios-buffer {
+  display: none;
+}
+
 .intro {
   height: 100%;
 }
@@ -345,6 +349,10 @@ a {
   .title-element .btn-ab {
     width: 100%;
     height: 20vmin;
+  }
+
+  .title-bits{
+    height: 80%;    /* Crude fix for iOS Safari's nav footer issue */
   }
 
   .pg-page {

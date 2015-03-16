@@ -54,6 +54,7 @@
   width: 75%;
   max-height: 78% !important;
   overflow: scroll;
+  margin-top: 5vh;
 }
 
 .mbj_notification_container input,
