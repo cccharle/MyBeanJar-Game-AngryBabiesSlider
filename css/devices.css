@@ -7,7 +7,8 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) {
   #app {
     /*max-width: 320px;*/
-    max-height: 508px;
+    /*max-height: 508px;*/
+    margin-bottom: 10%;
   }
 
   #puzzImg,

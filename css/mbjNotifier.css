@@ -30,10 +30,10 @@
   font-size: 1rem;
   font-family: 'Museo','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;
   color: #cccccc;
-  position: absolute;
+  position: relative;
   margin: 0px auto;
   z-index: 10;
-  top: 10%;
+  top: -60%;
   -webkit-transform: translateZ(0);
   padding: 15px;
   box-shadow: 0 0 10px 1px rgba(0,0,0,0.8);
@@ -51,7 +51,7 @@
   background: -ms-linear-gradient(-45deg, #222229 47%,#37373e 100%);
   background: linear-gradient(135deg, #222229 47%,#37373e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222229', endColorstr='#37373e',GradientType=1 );
-  float: right;
+  width: 75%;
   max-height: 78% !important;
   overflow: scroll;
 }
@@ -271,7 +271,7 @@ img.mbj_loading {
 
 .bean_notification_window {
   position: relative;
-  top: -100%;
+  top: -50%;
   width: 80%;
   background-color: #ddd;
   color: #ccc;
@@ -388,7 +388,7 @@ p.mbj_caption {
 
 .mbj_notification_pane_selector {
   display: inline-block;
-  width: 49%;
+  width: 50%;
   height: auto;
   padding: 0.8rem 0;
   text-align: center;
@@ -590,7 +590,8 @@ Not advised to edit stuff below this line
 .formoid-default-skyblue input[type=email] {
   padding: 6px 2%;
   font-family: inherit;
-  font-size: 1em;
+  font-size: 0.8em;
+  font-size: 0.8rem;
   font-weight: normal;
   /*background-image: -ms-linear-gradient(top, #444444, #999999); /* IE10 */
   /*filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#22000000', EndColorStr='#00FFFFFF'); /* IE6�IE9 */
@@ -614,6 +615,7 @@ Not advised to edit stuff below this line
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
+  height: 1.5rem;
 }
 
 /* .formoid-default-skyblue color scheme begin */

@@ -97,6 +97,11 @@
 
 
     <body>
+        <div class="ab-bg-container" id="bg-container-outer">
+            <img class="ab-bg-accents" id="accent-upperright" src="img/corner-accent-upperright002.png">
+            <img class="ab-bg-accents" id="accent-lowerleft" src="img/corner-accent-lowerleft002.png">
+        </div>
+
         <div id="app">
             <div class="ab-bg-container" id="bg-container">
                 <img class="ab-bg-accents" id="accent-upperright" src="img/corner-accent-upperright002.png">

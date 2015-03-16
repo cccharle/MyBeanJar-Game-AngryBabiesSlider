@@ -115,6 +115,10 @@ a {
   height: inherit; 
 }
 
+#bg-container-outer {
+  display: none;
+}
+
 .ab-bg-accents {
   position: absolute;
 }
@@ -194,13 +198,17 @@ a {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+  -webkit-justify-content: center;
+  justify-content: center;
   -webkit-align-items: center;
   align-items: center;
   height: 100%;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.title-bits div {
+  margin: 5% auto;
 }
 
 .title-bits img {
@@ -408,6 +416,10 @@ a {
     max-height: 100%;
   }
 
+  #bg-container-outer {
+    display: block;
+  }
+
   .btn-ab {
     width: 22.05vh;
     height: 6.81345vh;       /* Must be 30.9% of height */
@@ -465,6 +477,10 @@ a {
 
   .ab-bg-accents {
     max-width: 100%;
+  }
+
+  #bg-container-outer {
+    display: block;
   }
 
   .btn-ab {
