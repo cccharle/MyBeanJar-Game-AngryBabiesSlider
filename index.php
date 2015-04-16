@@ -117,21 +117,7 @@
                         jQuery(document).ready(function() {
                             jQuery( "#intro01" ).delay( 3000 ).fadeOut( "slow", function(){
                                 jQuery( "#intro02" ).delay( 1000 ).fadeIn( "slow" );
-                            });
-                            
-
-                            // jQuery( "div.black-screen" ).delay( 0 ).fadeTo( "800", "0.5");
-
-                            // jQuery( "#fig1" ).delay( 0 ).fadeIn("slow");
-                            // jQuery( "#puzzImg" ).delay( 0 ).fadeOut( "slow" );
-                            // jQuery( "#hintbutton" ).addClass( "unleashed" );
-                            // jQuery( "#hintbutton" ).attr( "onclick", "location.href='http://www.toysrus.com/category/index.jsp?categoryId=2255958'" );
-                            // jQuery( "#hintbutton" ).html( "Unearth the Legend" );
-                            // jQuery( "#fig1" ).delay( 0 ).css( "display", "block" );
-                            // jQuery( "div.jqp-wrapper" ).delay( 0 ).fadeOut( "slow" );
-                            // jQuery( "#fig2" ).delay( 500 ).fadeIn( "20" );
-                            // jQuery( "#fig2" ).delay( 1000 ).fadeOut( "20" );
-                            // jQuery( "#fig2" ).delay( 750 ).fadeIn( "20" );    
+                            }); 
                         });
                     </script>
                     <!-- <div class="title-bits"> -->
@@ -169,11 +155,14 @@
                     
                     <div class="container" id="puzz-outer">
                         <div class="container puzz-element" id="puzzle-container">
+                            
+                            <!-- Pulls random puzzle image from the img/puzz directory -->
                             <?php 
                                 $dir = "img/puzz/";
                                 $imgpool = scandir($dir);
                                 $randomimg = rand(2, sizeof($imgpool)-1);
                             ?>
+                            
                             <div id="hintloader">
                                 <img src="img/activind.gif">
                             </div>
@@ -187,6 +176,7 @@
                
                     <div class="mbj-footer">
                         <div class="footer-header-strip">
+                            <img class="grippy" src="img/grippybit.png">
                             <span class="footer-header-strip-counter count_wins">Thousands of Beans awarded</span>
                         </div>
                         <div id="main_container" class="panel_container">

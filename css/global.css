@@ -30,6 +30,7 @@ a {
 
 #puzzle-container {
   border-image: url(../img/ab-border003.png) 100 100 stretch;
+  border-style: solid;
 }
 
 .hidden {
@@ -235,8 +236,9 @@ a {
 }
 
 .start-large-logo {
-  max-width: 100%;
-  max-height: 22vh;
+/*  max-width: 100%;
+  max-height: 22vh;*/
+  width: 30vh;
 }
 
 .start-ab-logo {
@@ -381,8 +383,7 @@ a {
   }
 
   .start-large-logo {
-    max-width: 100%;
-    max-height: 50vw;
+    width: 75vw;
   }
 
   .footer-header-strip {
@@ -480,7 +481,7 @@ a {
   #hintloader {
     width: 21.87vh;
     /* Necessary to maintain 1:1 ratio of inner container */
-    height: 24.3vh;
+    height: 21.87vh;
   }
 
   .ab-bg-accents {
@@ -507,8 +508,8 @@ a {
   }
 
   .start-large-logo {
-    max-width: 100%;
-    max-height: 22vh;
+/*    max-width: 100%;
+    max-height: 22vh;*/
   }
 
   .mbj-footer {

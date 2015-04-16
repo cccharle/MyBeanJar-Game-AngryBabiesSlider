@@ -14,13 +14,13 @@ and (max-device-width : 568px) {
   #puzzImg,
   .jqp-wrapper,
   #hintloader {
-    height: 50vw !important;
-    width: 50vw;
+    height: 70vw !important;
+    width: 70vw;
   }
 
   .container {
-    height: 50vw;
-    width: 50vw;
+    height: 70vw;
+    width: 70vw;
   }
 
   #puzz-outer {
