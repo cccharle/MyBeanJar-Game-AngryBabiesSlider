@@ -383,8 +383,8 @@ function testpostedimage(result, message)
 
 A FREE COLLECTOR POSTER</p><p>99¢ EACH- TAKE EM ALL</p>
                             </div>
-                            <ul class="listing-listing"><div class="example" >
-                                 <button class="btn-ab btn free-play" onclick="javascript:freeplay()">FREE PLAY</button> 
+                            <ul class="listing-listing btn-ab-iap"><div class="example" >
+                                 <button class="btn-ab btn-ab-r btn" onclick="javascript:freeplay()">FREE PLAY</button> 
                                  <div id="listed8images">
                                   <?php
         $dir = "img/puzz/";

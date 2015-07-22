@@ -192,52 +192,7 @@ input[type=radio]:not(old):checked +  label > span > span{
     margin-bottom: 0 !important;
     margin-top: 3% !important;
 }
-.listing-info li {
-    list-style: inside none disc;
-    font-size: 15px;
-    margin: 15px 0;
-    color:#ff0;
-}
 
-.listing-page-custom {
-    padding: 10px;
-    float:left;
-}
-
-.listing-listing li {
-    background: #021CA1;
-    color: #ffff00;
-    float: left;
-    font-size: 15px;
-    list-style: outside none none;
-    margin: 2px 0;
-    padding: 4px;
-    width: 96%;
-    border-radius: 0px;
-}
-.listing-listing img {
-    float: left;
-}
-
-.example span {
-    color: #000;
-
-}
-.listing-listing span {
-    float: left;
-    font-size: 18px;
-    margin: 10px 0 10px 4px;
-    vertical-align: top;
-    width: 52%;
-	color:#fff;
-    font-family:"Comic Sans MS", cursive;
-}
-.listing-listing input {
-    float: left;
-    height: 49px;
-    vertical-align: middle;
-    width: 27px;
-}
 input[type="checkbox"]:not(old) + label > span, input[type="radio"]:not(old) + label > span {
     background: #FFFB00;
     border-radius: 0%;
