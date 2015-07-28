@@ -49,11 +49,11 @@
         <script type="text/javascript" charset="utf-8" src="lib/js/jquery-animate-css-rotate-scale.js"></script>
         <script type="text/javascript" charset="utf-8" src="lib/js/sxHelpers.js"></script>
         <script type="text/javascript" charset="utf-8" src="lib/js/jquery.jqpuzzle.js"></script>
-<!--        <script type="text/javascript" charset="utf-8" src="lib/js/slider/jssor.core.js"></script>-->
-<!--        <script type="text/javascript" charset="utf-8" src="lib/js/slider/jssor.utils.js"></script>
-        <script type="text/javascript" charset="utf-8" src="lib/js/slider/jssor.slider.js"></script>-->
+        <script type="text/javascript" charset="utf-8" src="lib/js/slider/jssor.core.js"></script>
+        <script type="text/javascript" charset="utf-8" src="lib/js/slider/jssor.utils.js"></script>
+        <script type="text/javascript" charset="utf-8" src="lib/js/slider/jssor.slider.js"></script>
         <script type="text/javascript" charset="utf-8" src="lib/js/winners.js"></script>
-<!--        <script type="text/javascript" charset="utf-8" src="lib/js/slider.js"></script>-->
+        <script type="text/javascript" charset="utf-8" src="lib/js/slider.js"></script>
         <script src='https://www.paypalobjects.com/js/external/dg.js' type='text/javascript'></script>
         <script type="text/javascript">
 
@@ -62,9 +62,11 @@
                 
                 console.log("Puzzle ready.");
                 //mbjAttemptAward();
-                get_winners("mainmenu");
+                // get_winners("mainmenu");
                 jQuery('#user-puzzle-page').hide();
                 // WatchPurchaseOptions();
+                mbjAttemptLogin();
+                MbjCreateOnboardModal();
 
 
 
@@ -623,15 +625,313 @@ function testpostedimage(result, message)
             </div>
             
             <!-- MBJ LOGIN/REGISTRATION MODAL -->
-            <div class="mbj_notification mbj_notification_container autocentered" id="mbj_notification_container_login">
+<!--             <div class="mbj_notification mbj_notification_container autocentered" id="mbj_notification_container_login">
+              
+
+              <form id="mbj_notification_close">
+                  <button type="submit" class="btn-close" id="mbj_notification_close_submit">
+                      <img src="img/ui_action_close.png">
+                  </button>
+              </form>
+ -->
+
+              <!-- INITIAL LOGIN VIEW -->
+<!--               <div class="mbj_notification_inner" id="mbj-login-init">
+                
+                <div class="mbj_notification_title">
+                    <img src="img/mbj_logo_50px.png" />
+                    <h2>WIN REAL STUFF YOU CHOOSE</h2>
+                </div>
+                
+                <div class="mbj_notification_beanticker">
+                  <div id="main_container" class="panel_container">
+                    <div class="slider_temp">
+                        <div id="slider1_container_t">
+                            <div u="slides" id="slider_components_t">
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mbj_notification action-buttons">
+                    
+                    <button class="btn-mbj btn-facebook submit full-width" id="mbj-facebook-login">
+                        <span class="mbj-button-icon"><i class="ion-social-facebook" style="font-size: 28px; vertical-align: middle; padding-right:0.5em;"></i></span><span class="mbj-button-text">Log in with Facebook</span>
+                    </button>
+
+                    <button class="btn-mbj submit full-width" id="mbj-login" onclick="MbjDisplayLoginView()">
+                        <span class="mbj-button-icon"><i class="ion-log-in" style="font-size: 28px; vertical-align: middle; padding-right:0.5em;"></i></span><span class="mbj-button-text">Log in / sign up with MyBeanJar</span>
+                    </button>
+
+                </div>
+              </div>
+            </div> -->
+
+
+            <!-- TEMPORARY STORAGE! -->
+
+              <!-- INITIAL LOGIN VIEW -->
+<!--               <form id="mbj_notification_close">
+                  <button type="submit" class="btn-close" id="mbj_notification_close_submit">
+                      <img src="img/ui_action_close.png">
+                  </button>
+              </form>
+
+              <div class="mbj_notification_inner" id="mbj-login-init">
+
+                
+                <div class="mbj_notification_title">
+                    <img src="img/mbj_logo_50px.png" />
+                    <h2>WIN REAL STUFF YOU CHOOSE</h2>
+                </div>
+                
+                <div class="mbj_notification_beanticker">
+                </div>
+
+                <div class="mbj_notification action-buttons">
+                    
+                    <button class="btn-mbj btn-facebook submit full-width" id="mbj-facebook-login">
+                        <span class="mbj-button-icon"><i class="ion-social-facebook" style="font-size: 28px; vertical-align: middle; padding-right:0.5em;"></i></span><span class="mbj-button-text">Log in with Facebook</span>
+                    </button>
+
+                    <button class="btn-mbj submit full-width" id="mbj-login" onclick="MbjDisplayLoginView()">
+                        <span class="mbj-button-icon"><i class="ion-log-in" style="font-size: 28px; vertical-align: middle; padding-right:0.5em;"></i></span><span class="mbj-button-text">Log in with MyBeanJar</span>
+                    </button>
+
+                </div> -->
+
+
+
+
+              <!-- MBJ LOGIN VIEW -->    
+
+<!--                 <div class="mbj_notification_inner" id="mbj-login-register">
+                
+                  <div class="mbj_notification_title">
+                      <img src="img/mbj_logo_50px.png" />
+                      <h2>SIGN IN AND WIN FOR REAL</h2>
+                  </div>
+                  
+
+                  <div class="mbj-login mbj-form-block" id="mbj_login">
+                      <form class="mbj-form" id="mbj_login_form" method="post">
+                          <div class="element-input">
+                              <label class="title" style="color: #a9a9a9;">username</label>
+                              <input class="large" id="mbj_form_u" type="text" name="mbj_login" required/>
+                          </div>
+                          <div class="mbj_login_status">
+                          </div>
+                      </form>
+                  </div>
+
+                  <div class="submit action-buttons">
+                      <button class="btn-mbj submit full-width" id="mbj-login" onclick="mbjAttemptAuthenticate()">
+                          <span class="mbj-button-icon"><i class="ion-log-in" style="font-size: 28px; vertical-align: middle; padding-right:0.5em;"></i></span><span class="mbj-button-text">Log In</span>
+                      </button>
+                      <button class="btn-mbj submit full-width" id="mbj-login" onclick="MbjDisplayRegistrationView()">
+                        <span class="mbj-button-icon"><i class="ion-android-clipboard" style="font-size: 28px; vertical-align: middle; padding-right:0.5em;"></i></span><span class="mbj-button-text">Sign Up</span>
+                      </button>
+                  </div>
+                </div> -->
+
+
+
+<!-- ?? -->
+<!--                   <div class="mbj_notification mbj-form-block action-buttons">
+
+                    <div class="mbj_notification_copy">
+                      <p>Don't have a MyBeanJar account? Sign up now and win for real.</p>
+                    </div>
+
+                    <button class="btn-mbj submit full-width" id="mbj-login" onclick="MbjDisplayRegistrationView()">
+                        <span class="mbj-button-icon"><i class="ion-android-clipboard" style="font-size: 28px; vertical-align: middle; padding-right:0.5em;"></i></span><span class="mbj-button-text">Sign Up</span>
+                    </button>
+                  </div>
+
+                </div> -->
+
+
+
+
+
+              <!-- REGISTRATION DETAILS VIEW -->
+
+<!--                   <div class="mbj_notification_inner" id="mbj-login-details">
+                  
+                  <div class="mbj_notification_title">
+                      <img src="img/mbj_logo_50px.png" />
+                      <h2>SIGN IN AND WIN FOR REAL</h2>
+                  </div>
+                  
+
+                  <div class="mbj-login mbj-form-block" id="mbj_details">
+                      <form class="mbj-form" id="mbj_details_form" method="post" onsubmit:"return postTest();">
+
+
+
+                          <div class="element-input">
+                              <label class="title" style="color: #a9a9a9;">e-mail</label>
+                              <input class="large" id="mbj_form_reg_email" type="email" name="mbj_reg_email" required/>
+                          </div>
+                          <div class="element-input">
+                              <label class="title" style="color: #a9a9a9;">ZIP / postal code</label>
+                              <input class="large" id="mbj_form_reg_zip" type="text" name="mbj_reg_zip" required/>
+                          </div>
+                          <div class="element-input">
+                              <label class="title" style="color: #a9a9a9;">password</label>
+                              <input class="large" id="mbj_form_p" type="password" name="mbj_password" required/>
+                          </div>
+
+                          <div class="mbj_login_status">
+                          </div>
+                      </form>
+                  </div>
+
+                  <div class="submit action-buttons">
+                      
+                      <button class="btn-mbj full-width" id="mbj-next" onclick="MbjDisplayCategoriesView()">
+                          <span class="mbj-button-icon"><i class="ion-chevron-right" style="font-size: 28px; vertical-align: middle; padding-right:0.5em;"></i></span><span class="mbj-button-text">Next</span>
+                      </button>
+
+                  </div>
+                </div> -->
+
+
+
+
+              <!-- CATEGORY SELECTION VIEW -->
+            
+     <!--          <div class="mbj_notification_inner" id="mbj-login-categories">
+                
+                <div class="mbj_notification_title">
+                    <img src="img/mbj_logo_50px.png" />
+                    <h2>SIGN IN AND WIN FOR REAL</h2>
+                </div>
+                
+                <div class="mbj-login mbj-form-block" id="mbj_categories">
+                    <form class="mbj-form" id="mbj_categories_form" method="post">
+
+                      <div class="mbj_notification_copy">
+                        <p>What sort of rewards would you like to receive?</p>
+                        <p>Select at least 3</p>
+                      </div>
+
+                      <div class="action-buttons category-list">
+                          
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-apparel" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Apparel</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-automotive" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Automotive</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-personalcare" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Personal Care</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-health" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Health &amp; Fitness</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-entertainment" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Entertainment</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-flowers" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Flowers &amp; Gifts</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-grocery" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Grocery or Packaged Goods</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-homegarden" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Home &amp; Garden</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-pets" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Pets</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-tech" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Tech</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-travel" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Travel &amp; Leisure</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-office" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Office</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-grabbag" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Grab Bag</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-charitable" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Charitable Donation</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-other" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Other</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-education" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Education</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                          <button type="button" class="btn-mbj btn-category full-width" id="mbj-category-games" onclick="MbjSelectCategory(this)">
+                              <span class="mbj-button-text">Games</span><span class="mbj-button-icon"><i class="ion-android-radio-button-off"></i></span>
+                          </button>
+
+                        </div>
+
+                        <div class="action-buttons">
+
+                          <button class="btn-mbj submit full-width" id="mbj-login" onclick="MbjDisplayLoginView()">
+                              <span class="mbj-button-icon"><i class="ion-android-send"></i></span><span class="mbj-button-text">Submit</span>
+                          </button>
+
+                        </div>
+                    
+                    </form>
+                </div>
+              </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- [OLD] MBJ LOGIN/REGISTRATION MODAL -->
+<!--             <div class="mbj_notification mbj_notification_container autocentered" id="mbj_notification_container_login">
+              <div class="mbj_notification_inner">
                 <div class="mbj_notification_title">
                     <img src="img/mbj_logo_50px.png" />
                     <h2>Play, Win, Cash In NOW</h2>
                 </div>
-                <div>
-                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-                    </fb:login-button>
-                </div>
+                <div> -->
+    <!--                 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                    </fb:login-button> -->
+<!--                 </div>
                 <div class="mbj_notification_copy">
                     <p>MyBeanJar scores great deals on stuff YOU want at the right time &amp; place. Real brands instantly, not points.</p>
                     <p>Win for Real Now!</p>
@@ -648,9 +948,10 @@ function testpostedimage(result, message)
                     <div class="mbj_notification_pane_selector inactive_selector" id="mbj_registertab">
                         <h2>Sign Up</h2>
                     </div>
-                </div>
+                </div> -->
+
                 <!--            login form             -->
-                <div class="mbj_notification_pane mbj_login_or_register active_pane" id="mbj_login">
+<!--                 <div class="mbj_notification_pane mbj_login_or_register active_pane" id="mbj_login">
                     <form class="formoid-default-skyblue" id="mbj_login_form" method="post">
                         <div class="element-input">
                              <input class="large" id="mbj_form_u" type="text" name="mbj_login" required/>
@@ -667,9 +968,10 @@ function testpostedimage(result, message)
                             </button>
                         </div>
                     </form>
-                </div>
+                </div> -->
+
                 <!--            Register form            -->
-                <div class="mbj_notification_pane mbj_login_or_register inactive_pane" id="mbj_register">
+<!--                 <div class="mbj_notification_pane mbj_login_or_register inactive_pane" id="mbj_register">
                     <form class="formoid-default-skyblue" id="mbj_registration_form" method="post">
                         <div class="element-input">
                             <label class="title" style="color: #a9a9a9;">username</label>
@@ -721,7 +1023,19 @@ function testpostedimage(result, message)
                         </div>
                     </form>
                 </div>
-            </div>
+              </div>
+            </div> -->
+
+
+
+
+
+
+
+
+
+
+
             <!--           Display users purchased image            -->
             <div id="user-img-listing-page" data-role="page" class="pg-page">
 <!--                <button class="btn-ab" onclick="javascript:gotohome()">Home</button>-->

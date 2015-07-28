@@ -627,10 +627,9 @@ img.comicscode {
   padding: 0 0 1rem 1rem;
 }
 
-/* line 537, ../scss/global.scss */
+/* line 538, ../scss/global.scss */
 #info-page,
-#image-preview,
-#mbj_notification_container_login {
+#image-preview {
   display: none;
 }
 
